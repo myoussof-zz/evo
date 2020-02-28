@@ -39,6 +39,11 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                        @can('name')
+                        <li class="nav-item">
+                                <a class="nav-link" href="test">test</a>
+                            </li>
+                        @endcan
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
